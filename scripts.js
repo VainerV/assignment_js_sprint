@@ -85,14 +85,22 @@ largestEl: function(){
       var equal1 = false;
       var equal2 = 0;
 
-    if(firstArr.length !== secondArr.length)
+     if(firstArr.length !== secondArr.length)
       {
-
-         return 0;
-
+         return false;
       }
 
-      if(firstArr.length === secondArr.length)
+      for (var arrLength = 0; arrLength <= firstArr.length; arrLength++)
+      {
+         if ((firstArr[arrLength]) !== (secondArr[arrLength]))
+         {
+             return false;
+         }
+     }
+     return true;
+
+
+    /*  if(firstArr.length === secondArr.length)
       {
           for(var arrLength = 0; arrLength < firstArr.length; arrLength++ )
           {
@@ -108,14 +116,10 @@ largestEl: function(){
 
              }
 
-          }
-
-      }
+        } */
 
 
 
-console.log(equal1);
-     return equal1;
   },
 
 
@@ -127,7 +131,7 @@ console.log(equal1);
     var fizz = "FIZZ";
     var myArr = [ ];
 
-    for( var arrLength = 1; arrLength < number + 1; arrLength++)
+    for( var arrLength = 1; arrLength <= number; arrLength++)
     {
       if((arrLength % 3 === 0 ) && (arrLength % 5 === 0) && (arrLength !== 0))
         {
