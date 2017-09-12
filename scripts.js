@@ -59,7 +59,7 @@ largestEl: function(){
                if (snake[letter] !== "!" && snake[letter] !== ".")
                 {
 
-                
+
                      tempWord.push(snake[letter]);
                 }
 
@@ -71,20 +71,91 @@ largestEl: function(){
 
       }
 
-       console.log(newJoinedString.join("_"));
+
       return  newJoinedString.join("_");
 
   },
 
 
 
-  compareArrays: function(){
-    // your code here (replace the return)
-    return "Finish compareArrays first!"
+  compareArrays: function()
+  {
+      var firstArr = [ ];
+      var secondArr = [ ];
+      var equal1 = false;
+      var equal2 = 0;
+
+    if(firstArr.length !== secondArr.length)
+      {
+
+         return 0;
+
+      }
+
+      if(firstArr.length === secondArr.length)
+      {
+          for(var arrLength = 0; arrLength < firstArr.length; arrLength++ )
+          {
+             if((firstArr[arrLength] === secondArr[arrLength]) && (equal2 !==1) )
+             {
+               equal1 = true;
+
+             }
+             if(firstArr[arrLength] !== secondArr[arrLength])
+             {
+                equal1 = false;
+                equal2 = 1;
+
+             }
+
+          }
+
+      }
+
+
+
+console.log(equal1);
+     return equal1;
   },
 
-  fizzBuzz: function(){
-    // your code here
+
+
+  fizzBuzz: function(number)
+  {
+
+    var buzz = "BUZZ";
+    var fizz = "FIZZ";
+    var myArr = [ ];
+
+    for( var arrLength = 1; arrLength < number + 1; arrLength++)
+    {
+      if((arrLength % 3 === 0 ) && (arrLength % 5 === 0) && (arrLength !== 0))
+        {
+
+          myArr.push(fizz+buzz);
+
+        }
+      if((arrLength % 3 === 0) && (arrLength % 5 !== 0) )
+      {
+          myArr.push(fizz);
+      }
+
+      if((arrLength % 3 !== 0) && (arrLength % 5 === 0) )
+      {
+          myArr.push(buzz);
+      }
+      if((arrLength % 3 !== 0) && (arrLength % 5 !== 0) )
+      {
+
+
+      myArr.push(arrLength);     }
+
+    }
+
+       console.log(myArr);
+    return myArr;
+
+
   },
 
   myMap: function(){
