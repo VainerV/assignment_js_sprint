@@ -85,41 +85,33 @@ largestEl: function(){
       var equal1 = false;
       var equal2 = 0;
 
-     if(firstArr.length !== secondArr.length)
-      {
-         return false;
-      }
+      if(firstArr.length !== secondArr.length)
+       {
 
-      for (var arrLength = 0; arrLength <= firstArr.length; arrLength++)
-      {
-         if ((firstArr[arrLength]) !== (secondArr[arrLength]))
-         {
-             return false;
-         }
-     }
-     return true;
+          equal2 = 1;
+          return equal1;
+       }
 
+      else
+       {
+           for(var arrLength = 0; arrLength <= firstArr.length; arrLength++ )
+           {
+              if((firstArr[arrLength] === secondArr[arrLength]) && (equal2 !==1) )
+              {
+                equal1 = true;
 
-    /*  if(firstArr.length === secondArr.length)
-      {
-          for(var arrLength = 0; arrLength < firstArr.length; arrLength++ )
-          {
-             if((firstArr[arrLength] === secondArr[arrLength]) && (equal2 !==1) )
-             {
-               equal1 = true;
+              }
+              if(firstArr[arrLength] !== secondArr[arrLength])
+              {
+                 equal1 = false;
+                 equal2 = 1;
 
-             }
-             if(firstArr[arrLength] !== secondArr[arrLength])
-             {
-                equal1 = false;
-                equal2 = 1;
+              }
 
-             }
+           }
 
-        } */
-
-
-
+       }
+       return equal1;
   },
 
 
