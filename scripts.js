@@ -154,29 +154,49 @@ largestEl: function(){
 
   },
 
-  myMap: function(){
-    // your code here
+  myMap: function(myArray, double)
+  {
+    var myArray = [1,2,3,4,5];
+    var newArray = [ ];
+    var temp = 0;
+    function double(myArray)
+    {
+      for(var loop = 0; loop < myArray.length; loop++)
+      {
+
+          temp = (myArray[loop]*2);
+          newArray.push(temp);
+
+      }
+
+    console.log(newArray);
+    return myArray;
   },
 
-  primes: function(number){
-   var myArray = [ ];
-   for(var prNumber = 0; prNumber <= number; prNumber++)
+
+
+  primes: function(myNumber){
+    var myArray = [ ];
+    var myNumber = 21;
+    var myPrime = true;
+   for(var mainLoop = 2; mainLoop <= myNumber; mainLoop ++)
    {
-        if((number !== 1)
+
+        myPrime = true;
+
+        for(var sndLoop =2 ; sndLoop < mainLoop; sndLoop++)
         {
-          for( var testnum = 2; testnum <= number; testnum ++)
-          {
-            if((number / testnum) === 1)
+            if(mainLoop % sndLoop === 0)
             {
-              myArray.push(testnum);
+                myPrime = false;
             }
-
-          }
-
         }
-
-   }
-    return myArray;
+        if(myPrime === true)
+        {
+            console.log(mainLoop);
+            myArray.push(mainLoop);
+        }
+    }
 
   },
 }
