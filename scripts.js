@@ -78,7 +78,7 @@ largestEl: function(){
 
 
 
-  compareArrays: function()
+  compareArrays: function(firstArr, secondArr)
   {
       var firstArr = [ ];
       var secondArr = [ ];
@@ -111,6 +111,8 @@ largestEl: function(){
            }
 
        }
+
+
        return equal1;
   },
 
@@ -159,6 +161,7 @@ largestEl: function(){
     var myArray = [1,2,3,4,5];
     var newArray = [ ];
     var temp = 0;
+
     function double(myArray)
     {
       for(var loop = 0; loop < myArray.length; loop++)
@@ -170,7 +173,10 @@ largestEl: function(){
       }
 
     console.log(newArray);
-    return myArray;
+    return newArray;
+  }
+
+  return newArray;
   },
 
 
