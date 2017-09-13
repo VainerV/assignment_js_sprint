@@ -158,7 +158,25 @@ largestEl: function(){
     // your code here
   },
 
-  primes: function(){
-    // your code here
+  primes: function(number){
+   var myArray = [ ];
+   for(var prNumber = 0; prNumber <= number; prNumber++)
+   {
+        if((number !== 1)
+        {
+          for( var testnum = 2; testnum <= number; testnum ++)
+          {
+            if((number / testnum) === 1)
+            {
+              myArray.push(testnum);
+            }
+
+          }
+
+        }
+
+   }
+    return myArray;
+
   },
 }
