@@ -80,31 +80,25 @@ largestEl: function(){
 
   compareArrays: function(firstArr, secondArr)
   {
-      var firstArr = [ ];
-      var secondArr = [ ];
-      var equal1 = false;
-      var equal2 = 0;
+
+      var equal1 = true;
 
       if(firstArr.length !== secondArr.length)
        {
 
-          equal2 = 1;
-          return equal1;
+          return false;
        }
 
       else
        {
-           for(var arrLength = 0; arrLength <= firstArr.length; arrLength++ )
+           for(var arrLength = 0; arrLength < firstArr.length; arrLength++ )
            {
-              if((firstArr[arrLength] === secondArr[arrLength]) && (equal2 !==1) )
-              {
-                equal1 = true;
 
-              }
+              console.log(firstArr[arrLength] !== secondArr[arrLength]);
               if(firstArr[arrLength] !== secondArr[arrLength])
               {
-                 equal1 = false;
-                 equal2 = 1;
+
+                 return false;
 
               }
 
@@ -158,32 +152,28 @@ largestEl: function(){
 
   myMap: function(myArray, double)
   {
-    var myArray = [1,2,3,4,5];
+
     var newArray = [ ];
     var temp = 0;
 
-    function double(myArray)
-    {
       for(var loop = 0; loop < myArray.length; loop++)
       {
 
-          temp = (myArray[loop]*2);
-          newArray.push(temp);
+
+          temp = myArray[loop];
+          newArray.push(double(temp));
+
 
       }
 
-    console.log(newArray);
     return newArray;
-  }
-
-  return newArray;
   },
 
 
 
   primes: function(myNumber){
     var myArray = [ ];
-    var myNumber = 21;
+
     var myPrime = true;
    for(var mainLoop = 2; mainLoop <= myNumber; mainLoop ++)
    {
@@ -203,6 +193,6 @@ largestEl: function(){
             myArray.push(mainLoop);
         }
     }
-
+    return myArray;
   },
 }

@@ -2,27 +2,27 @@
 // Object Bank
 var bank =
 {
-  account: 0 ,
+  account: 0,
   function AddMoney(number)
   {
-    this.account = this.account + number;
+    bank.account = this.account + number;
   },
   function collectWin(winAmount)
   {
-    this.account = this.account + winAmount;
+    bank.account = this.account + winAmount;
   };
 }
 
 
-// Object Spinning Wheel and Placing a Bet 
+// Object  Placing a Bet and number on the table
 var spin =
 {
   putBet: 0,
   spinNumber: 0,
   function newSpinBet(Bet, spinNbr)
   {
-  this.putBet = Bet;
-  this.spinNumbet = spinNbr;
+  spin.putBet = Bet;
+  spin.spinNumbet = spinNbr;
 
   };
 
@@ -38,7 +38,7 @@ var roulette =
   high: 35,
   function randomSpin(spinNumber, bet)
   {
-    this.randomNumber = Math.floor (Math.random()*(high-low)+low);
+    roulette.randomNumber = Math.floor (Math.random()*(high-low)+low);
 
   };
 }
